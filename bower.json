@@ -1,0 +1,7 @@
+{
+  "name": "todo",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "picnic": "~4.0.1"
+  }
+}
