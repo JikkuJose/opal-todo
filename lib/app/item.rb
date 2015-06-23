@@ -8,15 +8,18 @@ class Item
   end
 
   def setup
-    @item = Element.new('div.row')
+    @item = Element.new('span')
     @item.html = html
 
     @item.find('.close').on(:click) { @item.remove }
   end
 
   def html
-    "<div class='card'><p>" +
-      @text +
-      "</p><a class='close'>x</a></div>"
+    <<-HTML
+      <div data-alert class="alert-box secondary">
+      #{@text}
+        <a href="#" class="close">&times;</a>
+      </div>
+    HTML
   end
 end

@@ -15,4 +15,8 @@ Document.ready? do
     list.append item
     text_box.value = ''
   end
+
+  4.times do |i|
+    list.append(Item.new(i).item)
+  end
 end
